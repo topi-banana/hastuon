@@ -14,3 +14,5 @@ RUN pip install jaconv mecab-python3 fastapi uvicorn[standard]
 WORKDIR /app
 
 COPY ./* ./
+
+CMD [ "python", "main.py" ]

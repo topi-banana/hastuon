@@ -1,7 +1,7 @@
 import json
 
 import sqlite3
-dbname = 'data.db'
+dbname = 'datasets.db'
 conn = sqlite3.connect(dbname)
 cur = conn.cursor()
 

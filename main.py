@@ -1,7 +1,7 @@
 import MeCab
 import jaconv
 import sqlite3
-dbname = 'data.db'
+dbname = 'datasets.db'
 conn = sqlite3.connect(dbname, check_same_thread=False)
 cur = conn.cursor()
 
@@ -76,6 +76,10 @@ def info(txt:str):
   result = Result(txt)
   return result.dump()
 
+@app.get('/{txt}')
+def v1(txt:str):
+  result = Result(txt)
+  return {'text':result.result}
 
 if __name__ == '__main__':
   uvicorn.run(app, host=os.getenv('HASTUONAPI_HOST', '0.0.0.0'), port=int(os.getenv('HASTUONAPI_PORT', '10487')))
