@@ -43,6 +43,10 @@ $ python createDB.py
 `datasets.db` が作成されます
 
 # Install, Build, Run
+```sh
+$ git clone https://github.com/topi-banana/hastuon.git
+$ cd hastuon
+```
 
 ## Local
 
@@ -77,3 +81,7 @@ $ docker build . -t hastuon
 ```sh
 $ docker run -p 10487:10487 hastuon
 ```
+
+# Use
+
+他の人の経験をForkしてCommitすることが人生のrepositoryを豊かにして他人とmergeしながら更に改良を加えてconflictする
