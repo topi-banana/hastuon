@@ -1,6 +1,5 @@
 env
 .git*
 Dockerfile
-setup.py
 cmu.json
 bigalphabet.json
