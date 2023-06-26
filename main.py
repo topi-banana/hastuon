@@ -46,7 +46,7 @@ class Result:
   alphabet_tokens: list[Token] = []
   def __init__(self, txt:str):
     self.original = txt
-    self.yomi = mecab.parse(self.original).split()[0]
+    self.yomi = mecab.parse(self.original).rstrip()
     self.yomi_kana = jaconv.kata2hira(self.yomi)
     self.result = self.yomi_kana
     self.alphabet_tokens = []
@@ -69,10 +69,10 @@ class Result:
       self.alphabet_tokens.append(token)
       self.result = self.result.replace(i, token.kana)
   def dump(self):
-    return {**vars(self), 'alphabet_tokens': [vars(x) for x in self.alphabet_tokens]}
+    return {**self.__dict__, 'alphabet_tokens': [x.__dict__ for x in self.alphabet_tokens]}
 
 @app.get('/request')
-def info(txt:str):
+def main(txt:str):
   result = Result(txt)
   return result.dump()
 

@@ -45,6 +45,20 @@ $ python createDB.py
 # Install, Build, Run
 
 ## Local
+
+### [mecab-ipadic-neologd](https://github.com/neologd/mecab-ipadic-neologd)
+```sh
+$ git clone https://github.com/neologd/mecab-ipadic-neologd.git
+$ ./mecab-ipadic-neologd/bin/install-mecab-ipadic-neologd -a -n -y
+```
+
+### apt
+```sh
+$ apt update
+$ apt install -y mecab libmecab-dev mecab-ipadic-utf8
+```
+
+### pip
 ```sh
 $ pip install -r requirements.txt
 # or
