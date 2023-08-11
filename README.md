@@ -82,6 +82,7 @@ $ docker build . -t hastuon
 $ docker run -p 10487:10487 hastuon
 ```
 
-# Use
-
+# Example
+```
 他の人の経験をForkしてCommitすることが人生のrepositoryを豊かにして他人とmergeしながら更に改良を加えてconflictする
+```
